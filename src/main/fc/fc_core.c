@@ -393,7 +393,7 @@ void processRx(timeUs_t currentTimeUs)
     } else {
         DISABLE_FLIGHT_MODE(HORIZON_MODE);
     }
-
+//Use this line to test custom BF flashing is correct
     if (FLIGHT_MODE(ANGLE_MODE) || FLIGHT_MODE(HORIZON_MODE)) {
         LED1_ON;
     } else {
