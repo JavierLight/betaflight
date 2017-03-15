@@ -205,9 +205,9 @@ static void ltm_sframe(void)
 static void ltm_aframe()
 {
     ltm_initialise_packet('A');
-    ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.pitch));
+    //ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.pitch));
     ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.yaw));
-    ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.yaw*1000));
+    //ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.yaw*1000));
     ltm_finalise();
 }
 
@@ -241,9 +241,9 @@ static void process_ltm(void)
     else
         ltm_sframe();
     if (ltm_scheduler == 0)
-        ltm_oframe();
+        ltm_oframe();*/
     ltm_scheduler++;
-    ltm_scheduler %= 10;*/
+    ltm_scheduler %= 10;
 }
 
 void handleLtmTelemetry(void)
