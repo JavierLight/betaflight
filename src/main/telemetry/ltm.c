@@ -206,8 +206,8 @@ static void ltm_aframe()
 {
     ltm_initialise_packet('A');
     ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.pitch));
-    ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.roll));
     ltm_serialise_16(DECIDEGREES_TO_DEGREES(attitude.values.yaw));
+    ltm_serialise_16(attitude.values.yaw);
     ltm_finalise();
 }
 
